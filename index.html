@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Controle Financeiro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<h1>Controle Financeiro</h1>
+
+<p>
+Sistema inteligente para organização financeira
+</p>
+
+<button id="darkModeBtn">
+🌙 Dark Mode
+</button>
+
+</header>
+
+<main class="container">
+
+<section class="months">
+
+<h2>📅 Controle Mensal</h2>
+
+<select id="monthSelect">
+
+<option value="Janeiro">Janeiro</option>
+<option value="Fevereiro">Fevereiro</option>
+<option value="Março">Março</option>
+<option value="Abril">Abril</option>
+<option value="Maio">Maio</option>
+<option value="Junho">Junho</option>
+<option value="Julho">Julho</option>
+<option value="Agosto">Agosto</option>
+<option value="Setembro">Setembro</option>
+<option value="Outubro">Outubro</option>
+<option value="Novembro">Novembro</option>
+<option value="Dezembro">Dezembro</option>
+
+</select>
+
+</section>
+
+<section class="dashboard">
+
+<div class="card income">
+
+<h2>💰 Entradas</h2>
+
+<p>
+R$
+<span id="income">0.00</span>
+</p>
+
+</div>
+
+<div class="card expense">
+
+<h2>📉 Saídas</h2>
+
+<p>
+R$
+<span id="expense">0.00</span>
+</p>
+
+</div>
+
+<div class="card total">
+
+<h2>💳 Saldo</h2>
+
+<p>
+R$
+<span id="total">0.00</span>
+</p>
+
+</div>
+
+</section>
+
+<section class="form-section">
+
+<h2>Nova Transação</h2>
+
+<input
+type="text"
+id="description"
+placeholder="Descrição"
+>
+
+<input
+type="number"
+id="amount"
+placeholder="Valor"
+>
+
+<select id="type">
+
+<option value="income">
+Entrada
+</option>
+
+<option value="expense">
+Saída
+</option>
+
+</select>
+
+<button onclick="addTransaction()">
+Adicionar
+</button>
+
+</section>
+
+<section class="goals">
+
+<h2>🎯 Meta Financeira</h2>
+
+<input
+type="number"
+id="goalInput"
+placeholder="Digite sua meta"
+>
+
+<button onclick="saveGoal()">
+Salvar Meta
+</button>
+
+<p id="goalText"></p>
+
+</section>
+
+<section class="tips">
+
+<h2>🧠 Dica Financeira</h2>
+
+<p id="financialTip"></p>
+
+</section>
+
+<section class="chart-section">
+
+<h2>📊 Gráfico Financeiro</h2>
+
+<canvas id="financeChart"></canvas>
+
+</section>
+
+<section class="transactions">
+
+<h2>Histórico</h2>
+
+<ul id="transaction-list"></ul>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+Desenvolvido por Michelle Rocha da Silva
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
